@@ -9,11 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var show = false
+    @State var showAsia = true
+    @State var showSection = false
+    
     var body: some View {
         ZStack{
             Color(#colorLiteral(red: 0.9569171071, green: 0.9609925151, blue: 0.9731147885, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
-
+            
             VStack{
                 HStack{
                     Text("Destination")
@@ -32,6 +37,65 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal)
+                
+                HStack{
+                    
+                    HStack{
+                        Text("Asia")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(showAsia ? .white : .black)
+                    }
+                    .frame(width: 96.0, height: 27.0)
+                    .background(
+                        showAsia ?
+                            LinearGradient(
+                                gradient: Gradient(
+                                    colors:[Color(#colorLiteral(red: 0.0431372549, green: 0.6392156863, blue: 0.9529411765, alpha: 1)), Color(#colorLiteral(red: 0.01176470588, green: 0.7960784314, blue: 0.9843137255, alpha: 1))]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing) :
+                            LinearGradient(
+                                gradient: Gradient(
+                                    colors: [Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1)), Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1))]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing)
+                    )
+                    .cornerRadius(50)
+                    .onTapGesture {
+                        
+                        if !self.showAsia {
+                            self.showAsia.toggle()
+                            self.show.toggle()
+                        }
+                    }
+                    
+                    HStack{
+                        Text("America")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(show ? .white : .black)
+                    }
+                    .frame(width: 96.0, height: 27.0)
+                    .background(
+                        show ?
+                            LinearGradient(
+                                gradient: Gradient(
+                                    colors:[Color(#colorLiteral(red: 0.0431372549, green: 0.6392156863, blue: 0.9529411765, alpha: 1)), Color(#colorLiteral(red: 0.01176470588, green: 0.7960784314, blue: 0.9843137255, alpha: 1))]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing) :
+                            LinearGradient(
+                                gradient: Gradient(
+                                    colors: [Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1)), Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1))]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing)
+                    )
+                    .cornerRadius(50)
+                    .onTapGesture {
+                        
+                        if !self.show {
+                            self.show.toggle()
+                            self.showAsia.toggle()
+                        }
+                    }
+                }
                 
                 HStack{
                     VStack{
@@ -132,6 +196,7 @@ struct ContentView: View {
                         .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
                         .cornerRadius(10)
                     }
+                    .padding(.bottom, 5)
                     
                     VStack{
                         HStack{
@@ -166,6 +231,7 @@ struct ContentView: View {
                         .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
                         .cornerRadius(10)
                     }
+                    .padding(.bottom, 5)
                     
                     
                 }
