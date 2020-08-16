@@ -98,9 +98,9 @@ struct ContentView: View {
                 }
 
                 if self.showAsia {
-                    DestinationView()
+                    DestinationView(destination: destinationAsia[0])
                 } else if self.show {
-                    DestinationView()
+                    DestinationView(destination: destinationAmerica[0])
                 }
 
             }
@@ -128,16 +128,16 @@ struct Places: Identifiable{
 struct Destination: Identifiable {
     var id = UUID()
     var image_detail: String
-    var title_detail: String
-    var description_detail: String
+    var city: String
+    var country: String
     var places: [Places] = []
 }
 
-let updateData = [
+let destinationAsia = [
     Destination(
         image_detail: "image",
-        title_detail: "Taj Majal",
-        description_detail: "Republic of India",
+        city: "Taj Majal",
+        country: "Republic of India",
         places: [
             Places(
                 image: "favorite_place",
@@ -159,10 +159,13 @@ let updateData = [
             ),
         ]
     ),
+ ]
+
+let destinationAmerica = [
     Destination(
         image_detail: "image",
-        title_detail: "Lima",
-        description_detail: "Peru",
+        city: "Lima",
+        country: "Peru",
         places: [
             Places(
                 image: "favorite_place",
@@ -184,4 +187,4 @@ let updateData = [
             ),
         ]
     ),
- ]
+]

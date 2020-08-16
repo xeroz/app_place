@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct DestinationView: View {
+
+    var destination: Destination
+    
     var body: some View {
         VStack{
             HStack{
@@ -16,11 +19,11 @@ struct DestinationView: View {
                     Spacer()
                     HStack{
                         VStack{
-                            Text("Helsinki")
+                            Text(destination.city)
                                 .font(.system(size: 14, weight: .bold))
                                 .frame(width: 150, alignment: .leading)
                             
-                            Text("Finland")
+                            Text(destination.country)
                                 .font(.system(size: 9, weight: .medium))
                                 .foregroundColor(Color(#colorLiteral(red: 0.4391762614, green: 0.4392417073, blue: 0.4391556382, alpha: 1)))
                                 .frame(width: 150, alignment: .leading)
@@ -77,77 +80,42 @@ struct DestinationView: View {
             .padding(.top, 30)
             
             ScrollView{
-                VStack{
-                    HStack{
-                        Image("favorite_place")
-                            .offset(x: -30)
-                        
-                        VStack{
-                            Text("Lapand sket hill")
-                                .font(.system(size: 12, weight: .semibold))
-                                .frame(width: 150, alignment: .leading)
+                ForEach(destination.places){place in
+                    VStack{
+                        HStack{
+                            Image(place.image)
+                                .offset(x: -30)
                             
-                            Text("Finland")
-                                .font(.system(size: 8, weight: .regular))
-                                .frame(width: 150, alignment: .leading)
-                                .foregroundColor(Color(#colorLiteral(red: 0.5878872275, green: 0.7603010535, blue: 0.9592834115, alpha: 1)))
+                            VStack{
+                                Text(place.title)
+                                    .font(.system(size: 12, weight: .semibold))
+                                    .frame(width: 150, alignment: .leading)
+                                
+                                Text(place.country)
+                                    .font(.system(size: 8, weight: .regular))
+                                    .frame(width: 150, alignment: .leading)
+                                    .foregroundColor(Color(#colorLiteral(red: 0.5878872275, green: 0.7603010535, blue: 0.9592834115, alpha: 1)))
+                                
+                                Text(place.description)
+                                    .frame(width: 150, alignment: .leading)
+                                    .font(.system(size: 8, weight: .regular))
+                                    .padding(.top, 10)
+                                
+                                Spacer()
+                            }
+                            .padding(.top, 5)
+                            .offset(x: -25)
                             
-                            Text("Santorini is the world best shining city. Every year lot of traveler visited here")
-                                .frame(width: 150, alignment: .leading)
-                                .font(.system(size: 8, weight: .regular))
-                                .padding(.top, 10)
+                            Image("like")
+                                .padding(.top, -15)
                             
-                            Spacer()
                         }
-                        .padding(.top, 5)
-                        .offset(x: -25)
-                        
-                        Image("like")
-                            .padding(.top, -15)
-                        
+                        .frame(width: 320.0, height: 80.0)
+                        .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
+                        .cornerRadius(10)
                     }
-                    .frame(width: 320.0, height: 80.0)
-                    .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
-                    .cornerRadius(10)
+                    .padding(.bottom, 5)
                 }
-                .padding(.bottom, 5)
-                
-                VStack{
-                    HStack{
-                        Image("favorite_place")
-                            .offset(x: -30)
-                        
-                        VStack{
-                            Text("Lapand sket hill")
-                                .font(.system(size: 12, weight: .semibold))
-                                .frame(width: 150, alignment: .leading)
-                            
-                            Text("Finland")
-                                .font(.system(size: 8, weight: .regular))
-                                .frame(width: 150, alignment: .leading)
-                                .foregroundColor(Color(#colorLiteral(red: 0.5878872275, green: 0.7603010535, blue: 0.9592834115, alpha: 1)))
-                            
-                            Text("Santorini is the world best shining city. Every year lot of traveler visited here")
-                                .frame(width: 150, alignment: .leading)
-                                .font(.system(size: 8, weight: .regular))
-                                .padding(.top, 10)
-                            
-                            Spacer()
-                        }
-                        .padding(.top, 5)
-                        .offset(x: -25)
-                        
-                        Image("like")
-                            .padding(.top, -15)
-                        
-                    }
-                    .frame(width: 320.0, height: 80.0)
-                    .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
-                    .cornerRadius(10)
-                }
-                .padding(.bottom, 5)
-                
-                
             }
         }
     }
@@ -155,6 +123,6 @@ struct DestinationView: View {
 
 struct DestinationView_Previews: PreviewProvider {
     static var previews: some View {
-        DestinationView()
+        DestinationView(destination: destinationAsia[0])
     }
 }

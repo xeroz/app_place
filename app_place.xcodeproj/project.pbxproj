@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D331DB124E9A30C0019609E /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D331DB024E9A30C0019609E /* DestinationView.swift */; };
+		0D331DB524E9C42D0019609E /* StoreDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D331DB424E9C42D0019609E /* StoreDestination.swift */; };
 		0D6A41362486A03400755CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A41352486A03400755CB5 /* AppDelegate.swift */; };
 		0D6A41382486A03400755CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A41372486A03400755CB5 /* SceneDelegate.swift */; };
 		0D6A413A2486A03400755CB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A41392486A03400755CB5 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0D331DB024E9A30C0019609E /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
+		0D331DB424E9C42D0019609E /* StoreDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDestination.swift; sourceTree = "<group>"; };
 		0D6A41322486A03400755CB5 /* app_place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app_place.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6A41352486A03400755CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6A41372486A03400755CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				0D6A41432486A03800755CB5 /* Info.plist */,
 				0D6A413D2486A03800755CB5 /* Preview Content */,
 				0D331DB024E9A30C0019609E /* DestinationView.swift */,
+				0D331DB424E9C42D0019609E /* StoreDestination.swift */,
 			);
 			path = app_place;
 			sourceTree = "<group>";
@@ -202,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = juan;
 				TargetAttributes = {
 					0D6A41312486A03400755CB5 = {
@@ -273,6 +276,7 @@
 				0D6A41362486A03400755CB5 /* AppDelegate.swift in Sources */,
 				0D331DB124E9A30C0019609E /* DestinationView.swift in Sources */,
 				0D6A41382486A03400755CB5 /* SceneDelegate.swift in Sources */,
+				0D331DB524E9C42D0019609E /* StoreDestination.swift in Sources */,
 				0D6A413A2486A03400755CB5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +350,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -406,6 +411,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
