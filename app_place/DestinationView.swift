@@ -11,6 +11,7 @@ import SwiftUI
 struct DestinationView: View {
 
     var destination: Destination
+    @State var like = false
     
     var body: some View {
         VStack{
@@ -106,9 +107,13 @@ struct DestinationView: View {
                             .padding(.top, 5)
                             .offset(x: -25)
                             
-                            Image("like")
-                                .padding(.top, -15)
-                            
+                            HStack{
+                                Image(self.like ? "like" : "like_active")
+                                    .padding(.top, -15)
+                            }
+                            .onTapGesture {
+                                self.like.toggle()
+                            }
                         }
                         .frame(width: 320.0, height: 80.0)
                         .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
