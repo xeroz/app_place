@@ -81,23 +81,23 @@ struct DestinationView: View {
             .padding(.top, 30)
             
             ScrollView{
-                ForEach(destination.places){place in
+                ForEach(destination.places.indices, id: \.self){index in
                     VStack{
                         HStack{
-                            Image(place.image)
+                            Image(self.destination.places[index].image)
                                 .offset(x: -30)
                             
                             VStack{
-                                Text(place.title)
+                                Text(self.destination.places[index].title)
                                     .font(.system(size: 12, weight: .semibold))
                                     .frame(width: 150, alignment: .leading)
                                 
-                                Text(place.country)
+                                Text(self.destination.places[index].country)
                                     .font(.system(size: 8, weight: .regular))
                                     .frame(width: 150, alignment: .leading)
                                     .foregroundColor(Color(#colorLiteral(red: 0.5878872275, green: 0.7603010535, blue: 0.9592834115, alpha: 1)))
-                                
-                                Text(place.description)
+
+                                Text(self.destination.places[index].description)
                                     .frame(width: 150, alignment: .leading)
                                     .font(.system(size: 8, weight: .regular))
                                     .padding(.top, 10)
@@ -108,11 +108,23 @@ struct DestinationView: View {
                             .offset(x: -25)
                             
                             HStack{
-                                Image(self.like ? "like" : "like_active")
+                                Image("like")
                                     .padding(.top, -15)
                             }
-                            .onTapGesture {
-                                self.like.toggle()
+                            
+                            if self.destination.places[index].like {
+                                HStack{
+                                    Image("like")
+                                        .padding(.top, -15)
+                                }
+    //                            .onTapGesture {
+    //                                self.like.toggle()
+    //                            }
+                            } else {
+                                HStack{
+                                    Image("like_active")
+                                        .padding(.top, -15)
+                                }
                             }
                         }
                         .frame(width: 320.0, height: 80.0)

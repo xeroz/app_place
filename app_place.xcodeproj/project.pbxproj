@@ -17,6 +17,7 @@
 		0D6A41422486A03800755CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6A41402486A03800755CB5 /* LaunchScreen.storyboard */; };
 		0D6A414D2486A03800755CB5 /* app_placeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A414C2486A03800755CB5 /* app_placeTests.swift */; };
 		0D6A41582486A03800755CB5 /* app_placeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A41572486A03800755CB5 /* app_placeUITests.swift */; };
+		0D8A36D1250409A3002A75A4 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A36D0250409A3002A75A4 /* PlaceDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0D6A41532486A03800755CB5 /* app_placeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_placeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6A41572486A03800755CB5 /* app_placeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_placeUITests.swift; sourceTree = "<group>"; };
 		0D6A41592486A03800755CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D8A36D0250409A3002A75A4 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				0D6A413D2486A03800755CB5 /* Preview Content */,
 				0D331DB024E9A30C0019609E /* DestinationView.swift */,
 				0D331DB424E9C42D0019609E /* StoreDestination.swift */,
+				0D8A36D0250409A3002A75A4 /* PlaceDetailView.swift */,
 			);
 			path = app_place;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D6A41362486A03400755CB5 /* AppDelegate.swift in Sources */,
+				0D8A36D1250409A3002A75A4 /* PlaceDetailView.swift in Sources */,
 				0D331DB124E9A30C0019609E /* DestinationView.swift in Sources */,
 				0D6A41382486A03400755CB5 /* SceneDelegate.swift in Sources */,
 				0D331DB524E9C42D0019609E /* StoreDestination.swift in Sources */,

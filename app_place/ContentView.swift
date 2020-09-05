@@ -122,6 +122,7 @@ struct Places: Identifiable{
     var title: String
     var country: String
     var description: String
+    var like: Bool
 }
 
 
@@ -143,19 +144,22 @@ let destinationAsia = [
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Japan",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: false
             ),
             Places(
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Chinese",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: true
             ),
             Places(
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Republic of India",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: false
             ),
         ]
     ),
@@ -171,19 +175,22 @@ let destinationAmerica = [
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Peru",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: false
             ),
             Places(
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Brazil",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: false
             ),
             Places(
                 image: "favorite_place",
                 title: "Lapand sket hill",
                 country: "Ecuador",
-                description: "Santorini is the world best shining city. Every year lot of traveler visited here"
+                description: "Santorini is the world best shining city. Every year lot of traveler visited here",
+                like: false
             ),
         ]
     ),
