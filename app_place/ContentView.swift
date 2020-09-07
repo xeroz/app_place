@@ -122,7 +122,7 @@ struct Places: Identifiable{
     var title: String
     var country: String
     var description: String
-    var like: Bool
+    @State var like: Bool
 }
 
 

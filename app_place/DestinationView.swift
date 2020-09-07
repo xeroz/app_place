@@ -107,25 +107,21 @@ struct DestinationView: View {
                             .padding(.top, 5)
                             .offset(x: -25)
                             
-                            HStack{
-                                Image("like")
-                                    .padding(.top, -15)
+                            Button(action: {
+                                self.destination.places[index].like.toggle()
+                            }) {
+                                if self.destination.places[index].like {
+
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(Color.red)
+
+                                } else {
+                                    Image(systemName: "heart")
+                                        .foregroundColor(Color.gray)
+                                }
                             }
                             
-                            if self.destination.places[index].like {
-                                HStack{
-                                    Image("like")
-                                        .padding(.top, -15)
-                                }
-    //                            .onTapGesture {
-    //                                self.like.toggle()
-    //                            }
-                            } else {
-                                HStack{
-                                    Image("like_active")
-                                        .padding(.top, -15)
-                                }
-                            }
+                            
                         }
                         .frame(width: 320.0, height: 80.0)
                         .background(Color(#colorLiteral(red: 0.9999160171, green: 1, blue: 0.9998720288, alpha: 1)))
