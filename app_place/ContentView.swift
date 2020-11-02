@@ -61,7 +61,6 @@ struct ContentView: View {
                     )
                     .cornerRadius(50)
                     .onTapGesture {
-                        
                         if !self.showAsia {
                             self.showAsia.toggle()
                             self.show.toggle()
@@ -142,14 +141,14 @@ let destinationAsia = [
         places: [
             Places(
                 image: "favorite_place",
-                title: "Lapand sket hill",
+                title: "Tokio",
                 country: "Japan",
                 description: "Santorini is the world best shining city. Every year lot of traveler visited here",
                 like: false
             ),
             Places(
                 image: "favorite_place",
-                title: "Lapand sket hill",
+                title: "Pekin",
                 country: "Chinese",
                 description: "Santorini is the world best shining city. Every year lot of traveler visited here",
                 like: true
@@ -173,24 +172,24 @@ let destinationAmerica = [
         places: [
             Places(
                 image: "favorite_place",
-                title: "Lapand sket hill",
+                title: "Lima",
                 country: "Peru",
                 description: "Santorini is the world best shining city. Every year lot of traveler visited here",
-                like: false
+                like: true
             ),
             Places(
                 image: "favorite_place",
-                title: "Lapand sket hill",
+                title: "Rio de Janeiro",
                 country: "Brazil",
                 description: "Santorini is the world best shining city. Every year lot of traveler visited here",
                 like: false
             ),
             Places(
                 image: "favorite_place",
-                title: "Lapand sket hill",
-                country: "Ecuador",
+                title: "Buenos Aires",
+                country: "Aregentina",
                 description: "Santorini is the world best shining city. Every year lot of traveler visited here",
-                like: false
+                like: true
             ),
         ]
     ),

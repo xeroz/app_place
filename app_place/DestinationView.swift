@@ -12,63 +12,72 @@ struct DestinationView: View {
 
     var destination: Destination
     @State var like = false
+    @State var showUpdate = false
     
     var body: some View {
         VStack{
+           
+            
             HStack{
-                VStack{
-                    Spacer()
-                    HStack{
-                        VStack{
-                            Text(destination.city)
-                                .font(.system(size: 14, weight: .bold))
-                                .frame(width: 150, alignment: .leading)
-                            
-                            Text(destination.country)
-                                .font(.system(size: 9, weight: .medium))
-                                .foregroundColor(Color(#colorLiteral(red: 0.4391762614, green: 0.4392417073, blue: 0.4391556382, alpha: 1)))
-                                .frame(width: 150, alignment: .leading)
-                        }
-
+                Button(action: { self.showUpdate.toggle() }){
+                    VStack{
                         Spacer()
+                        HStack{
+                            VStack{
+                                Text(destination.city)
+                                    .font(.system(size: 14, weight: .bold))
+                                    .frame(width: 150, alignment: .leading)
+                                
+                                Text(destination.country)
+                                    .font(.system(size: 9, weight: .medium))
+                                    .foregroundColor(Color(#colorLiteral(red: 0.4391762614, green: 0.4392417073, blue: 0.4391556382, alpha: 1)))
+                                    .frame(width: 150, alignment: .leading)
+                            }
 
-                        Image("user_icon")
-                            .renderingMode(.original)
-                            .frame(width: 40.0, height: 40.0)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .offset(x: 75)
-                        
+                            Spacer()
+
+                            Image("user_icon")
+                                .renderingMode(.original)
+                                .frame(width: 40.0, height: 40.0)
+                                .background(Color.white)
+                                .clipShape(Circle())
+                                .offset(x: 75)
                             
-                        Image("user_icon")
-                            .renderingMode(.original)
-                            .frame(width: 40.0, height: 40.0)
-                            .background(Color.white)
-                            .clipShape(Circle())
-                            .offset(x: 45.5)
-                        
-                        Color(#colorLiteral(red: 0.2791154385, green: 0.5945160389, blue: 0.9288005233, alpha: 0.5))
-                            .frame(width: 35.0, height: 35.0)
-                            .clipShape(Circle())
-                            .overlay(
-                                Text("10 +")
-                                    .font(.system(size: 8, weight: .semibold))
-                                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            )
-                        
-                    }
-                    .padding(.bottom)
-                    .padding(.horizontal, 30)
+                                
+                            Image("user_icon")
+                                .renderingMode(.original)
+                                .frame(width: 40.0, height: 40.0)
+                                .background(Color.white)
+                                .clipShape(Circle())
+                                .offset(x: 45.5)
+                            
+                            Color(#colorLiteral(red: 0.2791154385, green: 0.5945160389, blue: 0.9288005233, alpha: 0.5))
+                                .frame(width: 35.0, height: 35.0)
+                                .clipShape(Circle())
+                                .overlay(
+                                    Text("10 +")
+                                        .font(.system(size: 8, weight: .semibold))
+                                        .foregroundColor(Color(#colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1)))
+                                )
+                            
+                        }
+                        .padding(.bottom)
+                        .padding(.horizontal, 30)
 
+                    }
+                    .frame(width: 335.0, height: 247.0)
+                    .background(Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1)))
+                    .cornerRadius(20)
+                    .overlay(
+                        Image("image")
+                            .offset(y: -40)
+                        
+                    )
                 }
-                .frame(width: 335.0, height: 247.0)
-                .background(Color(#colorLiteral(red: 0.9990486503, green: 0.9763767123, blue: 0.9761041999, alpha: 1)))
-                .cornerRadius(20)
-                .overlay(
-                    Image("image")
-                        .offset(y: -40)
-                    
-                )
+                .sheet(isPresented: $showUpdate){
+                    PlaceDetailView()
+                }
+                
             }
             .padding(.top, 50)
             

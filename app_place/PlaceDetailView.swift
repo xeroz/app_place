@@ -21,18 +21,9 @@ struct PlaceDetailView: View {
                             .font(.system(size: 24, weight: .bold))
                         
                         Spacer()
-
-                        Button(action: {
-                            print("ssss")
-                        }) {
-                            Image("user_icon")
-                                .renderingMode(.original)
-                                .frame(width: 40.0, height: 40.0)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        }
                     }
                     .padding(.horizontal)
+                    .padding(.top)
                     
                     VStack{
                         ScrollView(.horizontal, showsIndicators: false){
@@ -59,6 +50,8 @@ struct PlaceDetailView: View {
                         }
                     }
                     .padding(.bottom, 30)
+                    .padding(.top, -10)
+                    
 
                     VStack(spacing: 0){
                         HStack{
